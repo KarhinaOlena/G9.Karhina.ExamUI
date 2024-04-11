@@ -1,0 +1,59 @@
+TC_001_SignInWithValidLogin
+Preconditions:
+1. Open browser
+2. Navigate to the login page
+
+Test steps:
+1. Click on the button "Cabinet"
+2. Enter valid login into the input field "Login"
+3. Enter valid password into the input field "Password"
+4. Set checkbox "Remember me" to needed state
+5. Click on the button "Sign in"
+6. Click on the button "Cabinet"
+
+Expected results:
+1. Button Logout is displayed
+2. CabinetTitle is displayed
+3. PersonalDataTitle is displayed
+4. UserAvatar is displayed
+5. ButtonEditProfile is displayed
+6. ButtonOrders is displayed
+7. InputLogin is not displayed
+8. InputPassword is not displayed
+9. ButtonSignIn is not displayed
+10. CheckBoxRememberMe is not displayed
+11. ButtonSignUp is not displayed
+
+
+
+TC_002_AddOneBookToCart
+Preconditions:
+1. Open browser
+2. Navigate to the login page
+
+Test steps:
+1. Click on the button "Cabinet"
+2. Enter valid login into the input field "Login"
+3. Enter valid password into the input field "Password"
+4. Set checkbox "Remember me" to needed state
+5. Click on the button "Sign in"
+6. Click on the button "Knigi" in the catalog
+7. Click on the button "Xudoznia literatura" in the catalog
+8. Click on the button "Istorichna proza" in the catalog
+9. Click on the button "Za perekopom je zemlia"
+10. Click on the button "Add to cart"
+
+
+Expected results:
+Button "Checkout" is displayed
+Button "Remove from cart" is displayed
+Modal window "Cart" is displayed
+Label "Cart" is displayed
+
+
+
+
+
+
+
+

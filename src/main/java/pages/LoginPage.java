@@ -10,8 +10,21 @@ public class LoginPage extends ParentPage {
         super(webDriver);
     }
 
+
     @FindBy(xpath = ".//button[@aria-label='Кабінет']")
-    private WebElement buttonCabinet;
+    private WebElement buttonCabinetLoginPage;
+
+    @FindBy(xpath = ".//input[@name='login']")
+    private WebElement inputLogin;
+
+    @FindBy(xpath = ".//input[@name='password']")
+    private WebElement inputPassword;
+
+    @FindBy(xpath = ".//button[contains(text(),'Увійти')]")
+    private WebElement buttonSignIn;
+
+    @FindBy(xpath = ".//label[@for='userSigninRemember']")
+    private WebElement checkBoxRememberMe;
 
     @Override
     protected String getRelativeUrl() {
@@ -28,8 +41,50 @@ public class LoginPage extends ParentPage {
         }
     }
 
-    public void clickOnButtonCabinet(){
-        clickOnElement(buttonCabinet);
+    public void clickOnButtonCabinetLoginPage() {
+        clickOnElement(buttonCabinetLoginPage);
+
     }
+
+
+    public void enterTextIntoInputLogin(String text) {
+        cleanAndEnterTextIntoElement(inputLogin, text);
+    }
+
+    public void enterTextIntoInputPassword(String text) {
+        cleanAndEnterTextIntoElement(inputPassword, text);
+    }
+
+    public void setCheckBoxRememberMeToNeededState(String neededState) {
+        setCheckboxToNeededState(checkBoxRememberMe, neededState);
+    }
+
+    public void clickOnButtonSignIn() {
+        clickOnElement(buttonSignIn);
+    }
+
+    public boolean checkIsbuttonCabinetLoginPageIsNotDisplayed() {
+        return checkElementIsNotDisplayed(buttonCabinetLoginPage);
+    }
+
+    public boolean checkIsButtonSignInIsNotDisplayed() {
+        return checkElementIsNotDisplayed(buttonSignIn);
+    }
+
+    public boolean checkIsCheckBoxRememberMeIsNotDisplayed() {
+        return checkElementIsNotDisplayed(checkBoxRememberMe);
+    }
+
+    public boolean checkIsInputLoginIsNotDisplayed() {
+        return checkElementIsNotDisplayed(inputLogin);
+    }
+
+    public boolean checkIsInputPasswordIsNotDisplayed() {
+        return checkElementIsNotDisplayed(inputPassword);
+    }
+
+
+
+
 
 }

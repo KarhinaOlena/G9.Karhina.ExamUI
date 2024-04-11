@@ -1,0 +1,44 @@
+Login Page
+buttonCabinetLoginPage = .//button[@aria-label='Кабінет']
+inputLogin = .//input[@name='login']
+inputPassword = .//input[@name='password']
+buttonSignIn = .//button[contains(text(),'Увійти')]
+checkBoxRememberMe = .//label[@for='userSigninRemember']
+
+
+Home Page
+buttonKnigiInCatalog = .//a[@href='https://readeat.com/catalog/knigi']
+
+Header Elements
+buttonCabinet = .//a[@class='btn btn-link text-body p-0 d-flex flex-column align-items-center justify-content-center position-relative']
+
+
+My Profile Page
+buttonLogout = .//a[@data-request='onLogout']
+CabinetTitle = .//h1[@class='mb-3']
+personalDataTitle = .//div[@class='h5 border-bottom mb-4 pb-4'][contains(text(),'Особисті дані')]
+userAvatar = .//img[@class='rounded-circle img-fluid']
+buttonEditProfile = .//a[@class='btn btn-light btn-sm']
+buttonOrders = .//a[@href='https://readeat.com/account/orders']
+
+
+Cart Elements
+buttonContinueShopping = .//button[@class='btn btn-outline-dark w-100']
+buttonCheckout = .//a[@class='fn_checkout btn btn-primary w-100 mb-4 mb-lg-0']
+buttonCheckoutLink = .//a[@href='https://readeat.com/checkout']
+buttonRemoveFromCart = .//button[@class='fn_cartRemove btn btn-light p-2 lh-1']
+cartModal = .//div[@class='modal-content']
+cartModalLabel = .//div[@id='cartModalLabel']
+
+Knigi Page
+buttonXudozniaLiteraturaInCatalog = .//a[@class='d-block link-primary fw-bolder mb-2 mb-lg-3 lh-sm'][contains(text(),'Художня література')]
+
+Xudoznia Literatura Page
+buttonIstorichnaProzaInCatalog = .//a[@class='d-block link-primary fw-bolder mb-2 mb-lg-3 lh-sm'][contains(text(),'Історична проза')]
+
+Istorichna Proza Page
+buttonZaPerekopomJeZemlia = .//a[@href='https://readeat.com/product/104302-za-perekopom-je-zemlia']
+
+Za Perekopom Je Zemlia Page
+buttonAddToCart = .//button[@class='btn btn-primary w-100 px-0 fn_cartAdd']
+
