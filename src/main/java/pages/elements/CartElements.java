@@ -1,9 +1,11 @@
 package pages.elements;
 
+import data.TestData;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.CommonActionsWithElements;
+import pages.LoginPage;
 
 public class CartElements extends CommonActionsWithElements {
     public CartElements(WebDriver webDriver) {
@@ -25,6 +27,8 @@ public class CartElements extends CommonActionsWithElements {
     @FindBy(xpath = ".//div[@id='cartModalLabel']")
     private WebElement cartModalLabel;
 
+    @FindBy(xpath = ".//div[@class='py-5 text-center'][contains(text(),'Ваш кошик порожній')]")
+    private WebElement cartIsEmptyLabel;
 
 
     public boolean isButtonContinueShoppingDisplayed() {
@@ -55,7 +59,15 @@ public class CartElements extends CommonActionsWithElements {
         checkElementIsDisplayed(buttonCheckout);
     }
 
+    public void clickOnButtonRemoveFromCart() {
+        clickOnElement(buttonRemoveFromCart);
+    }
 
+    public boolean checkIsCartIsEmptyLabelDisplayed() {
+        return checkElementIsDisplayed(cartIsEmptyLabel);
+    }
 }
+
+
 
 

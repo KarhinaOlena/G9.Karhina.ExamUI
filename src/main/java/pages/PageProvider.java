@@ -46,4 +46,8 @@ public class PageProvider {
     public CartElements getCartElements() {
         return new CartElements(webDriver);
     }
+
+    public WishListPage getWishListPage() {
+        return new WishListPage(webDriver);
+    }
 }

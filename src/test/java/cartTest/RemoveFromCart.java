@@ -2,12 +2,11 @@ package cartTest;
 
 import baseTest.BaseTest;
 import data.TestData;
-import org.junit.Assert;
 import org.junit.Test;
 
-public class AddToCart extends BaseTest {
+public class RemoveFromCart extends BaseTest {
     @Test
-    public void TC_002_AddOneBookToCart(){
+    public void TC_004_RemoveOneBookFromCart(){
         pageProvider.getLoginPage().enterLoginFormWithValidCred(TestData.VALID_LOGIN_UI, TestData.VALID_PASSWORD_UI);
         pageProvider.getHomePage().checkIsRedirectToHomePage();
         pageProvider.getHomePage().clickOnButtonKnigiInCatalog();
@@ -22,7 +21,9 @@ public class AddToCart extends BaseTest {
         pageProvider.getCartElements().checkIsButtonCheckoutLinkDisplayed();
         pageProvider.getCartElements().checkIsButtonRemoveFromCartDisplayed();
         pageProvider.getCartElements().checkIsCartModalLabelDisplayed();
+        pageProvider.getCartElements().clickOnButtonRemoveFromCart();
 
 
     }
+
 }

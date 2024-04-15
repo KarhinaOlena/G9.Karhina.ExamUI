@@ -63,6 +63,15 @@ public class LoginPage extends ParentPage {
         clickOnElement(buttonSignIn);
     }
 
+    public void enterLoginFormWithValidCred(String login, String password) {
+        openLoginPage();
+        clickOnButtonCabinetLoginPage();
+        enterTextIntoInputLogin(login);
+        enterTextIntoInputPassword(password);
+        setCheckBoxRememberMeToNeededState("Checked");
+        clickOnButtonSignIn();
+    }
+
     public boolean checkIsbuttonCabinetLoginPageIsNotDisplayed() {
         return checkElementIsNotDisplayed(buttonCabinetLoginPage);
     }
@@ -84,7 +93,29 @@ public class LoginPage extends ParentPage {
     }
 
 
+    public void checkIsRedirectToLoginPage() {
+        checkUrl();
+        Assert.assertTrue("Invalid Page Not Login Page",
+                webDriver.getCurrentUrl().contains(baseUrl + getRelativeUrl()));
+    }
 
+    public void checkIsbuttonCabinetLoginPageIsDisplayed() {
+        checkElementIsDisplayed(buttonCabinetLoginPage);
+    }
 
+    public void checkIsButtonSignInIsDisplayed() {
+        checkElementIsDisplayed(buttonSignIn);
+    }
 
+    public void checkIsCheckBoxRememberMeIsDisplayed() {
+        checkElementIsDisplayed(checkBoxRememberMe);
+    }
+
+    public void checkIsInputLoginIsDisplayed() {
+        checkElementIsDisplayed(inputLogin);
+    }
+
+    public void checkIsInputPasswordIsDisplayed() {
+        checkElementIsDisplayed(inputPassword);
+    }
 }

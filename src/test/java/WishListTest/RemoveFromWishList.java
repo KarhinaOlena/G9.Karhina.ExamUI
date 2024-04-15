@@ -1,13 +1,12 @@
-package cartTest;
+package WishListTest;
 
 import baseTest.BaseTest;
 import data.TestData;
-import org.junit.Assert;
 import org.junit.Test;
 
-public class AddToCart extends BaseTest {
+public class RemoveFromWishList extends BaseTest {
     @Test
-    public void TC_002_AddOneBookToCart(){
+    public void TC_006_RemoveOneBookFromWishList() {
         pageProvider.getLoginPage().enterLoginFormWithValidCred(TestData.VALID_LOGIN_UI, TestData.VALID_PASSWORD_UI);
         pageProvider.getHomePage().checkIsRedirectToHomePage();
         pageProvider.getHomePage().clickOnButtonKnigiInCatalog();
@@ -18,11 +17,17 @@ public class AddToCart extends BaseTest {
         pageProvider.getIstorichnaHudozhnyaLiteraturaPage().checkIsRedirectToIstorichnaHudozhnyaLiteraturaBookPage();
         pageProvider.getIstorichnaHudozhnyaLiteraturaPage().clickOnButtonZaPerekopomJeZemlia();
         pageProvider.getZaPerekopomJeZemliaPage().checkIsRedirectToZaPerekopomJeZemliaBookPage();
-        pageProvider.getZaPerekopomJeZemliaPage().clickOnButtonAddToCart();
-        pageProvider.getCartElements().checkIsButtonCheckoutLinkDisplayed();
-        pageProvider.getCartElements().checkIsButtonRemoveFromCartDisplayed();
-        pageProvider.getCartElements().checkIsCartModalLabelDisplayed();
+        pageProvider.getZaPerekopomJeZemliaPage().clickOnButtonAddToWishList();
+        pageProvider.getHomePage().getHeaderElements().clickOnButtonWishList();
+        pageProvider.getWishListPage().checkIsRedirectToWishListPage();
+        pageProvider.getWishListPage().clickOnImgZaPerekopomJeZemlia();
+        pageProvider.getZaPerekopomJeZemliaPage().checkIsRedirectToZaPerekopomJeZemliaBookPage();
+        pageProvider.getZaPerekopomJeZemliaPage().clickOnButtonRemoveFromWishList();
+        pageProvider.getZaPerekopomJeZemliaPage().checkIsButtonAddToWishListDisplayed();
+        pageProvider.getHomePage().getHeaderElements().clickOnButtonWishList();
+        pageProvider.getWishListPage().checkIsRedirectToWishListPageNotDisplayed();
 
 
     }
+
 }

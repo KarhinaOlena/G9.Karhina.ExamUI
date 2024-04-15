@@ -13,6 +13,9 @@ public class HeaderElements extends CommonActionsWithElements {
             ".//a[@class='btn btn-link text-body p-0 d-flex flex-column align-items-center justify-content-center position-relative']")
     private WebElement buttonCabinet;
 
+    @FindBy(xpath = ".//button[@aria-label='Обране']")
+    private WebElement buttonWishList;
+
     public HeaderElements(WebDriver webDriver) {
         super(webDriver);
     }
@@ -25,6 +28,10 @@ public class HeaderElements extends CommonActionsWithElements {
 
     public boolean isButtonCabinetDisplayed() {
         return isElementDisplayed(buttonCabinet);
+    }
+
+    public void clickOnButtonWishList() {
+        clickOnElement(buttonWishList);
     }
 
 }

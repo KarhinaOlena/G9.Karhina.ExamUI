@@ -5,6 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class ZaPerekopomJeZemliaBookPage extends ParentPage{
+
+    @FindBy(xpath = ".//button[@class='btn btn-light px-3 fn_add_wishlist']")
+    private WebElement buttonAddToWishList;
+
+    @FindBy(xpath = ".//button[@class='btn btn-light px-3 fn_remove_wishlist active']")
+    private WebElement buttonRemoveFromWishList;
+
+
     public ZaPerekopomJeZemliaBookPage(WebDriver webDriver) {
         super(webDriver);
     }
@@ -26,5 +34,16 @@ public class ZaPerekopomJeZemliaBookPage extends ParentPage{
         clickOnElement(buttonAddToCart);
     }
 
+    public void clickOnButtonAddToWishList() {
+        clickOnElement(buttonAddToWishList);
+    }
+
+    public void clickOnButtonRemoveFromWishList() {
+        clickOnElement(buttonRemoveFromWishList);
+    }
+
+    public boolean checkIsButtonAddToWishListDisplayed() {
+        return isElementDisplayed(buttonAddToWishList);
+    }
 }
 

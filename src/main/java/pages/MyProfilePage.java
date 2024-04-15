@@ -43,9 +43,11 @@ public class MyProfilePage extends ParentPage {
     @FindBy(xpath = ".//a[@href='https://readeat.com/account/orders']")
     private WebElement buttonOrders;
 
+    @FindBy(xpath = ".//button[@data-bs-target='#loginModal'][contains(text(),'Увійти')]")
+    private WebElement buttonLogin;
 
-
-
+    @FindBy(xpath = ".//button[@data-bs-target='#registerModal'][contains(text(),' Зареєструватися')]")
+    private WebElement buttonRegister;
 
 
     public MyProfilePage checkIsRedirectToMyProfilePage() {
@@ -93,5 +95,20 @@ public class MyProfilePage extends ParentPage {
         checkElementIsDisplayed(buttonOrders);
     }
 
+    public void checkIsButtonLoginDisplayed() {
+        checkElementIsDisplayed(buttonLogin);
+    }
+
+    public void checkIsButtonRegisterDisplayed() {
+        checkElementIsDisplayed(buttonRegister);
+    }
+
+    public void clickOnButtonOrders() {
+        clickOnElement(buttonOrders);
+    }
+
+    public void clickOnButtonLogout() {
+        clickOnElement(buttonLogout);
+    }
 }
 
