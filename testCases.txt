@@ -51,6 +51,99 @@ Modal window "Cart" is displayed
 Label "Cart" is displayed
 
 
+TC_003_SignOut
+Preconditions:
+1. Open browser
+2. Navigate to the login page
+
+Test steps:
+1. Click on the button "Cabinet"
+2. Enter valid login into the input field "Login"
+3. Enter valid password into the input field "Password"
+4. Set checkbox "Remember me" to needed state
+5. Click on the button "Sign in"
+6. Click on the button "Cabinet"
+7. Click on the button "Logout"
+
+Expected results:
+Button "Cabinet" is displayed
+Button "Login" is displayed
+Button "Register" is displayed
+
+
+TC_004_RemoveOneBookFromCart
+Preconditions:
+1. Open browser
+2. Navigate to the login page
+
+Test steps:
+1. Click on the button "Cabinet"
+2. Enter valid login into the input field "Login"
+3. Enter valid password into the input field "Password"
+4. Set checkbox "Remember me" to needed state
+5. Click on the button "Sign in"
+6. Click on the button "Knigi" in the catalog
+7. Click on the button "Xudoznia literatura" in the catalog
+8. Click on the button "Istorichna proza" in the catalog
+9. Click on the button "Za perekopom je zemlia"
+10. Click on the button "Add to cart"
+11. Click on the button "Remove from cart"
+
+Expected results:
+
+
+
+TC_005_AddOneBookToWishList
+Preconditions:
+1. Open browser
+2. Navigate to the login page
+
+Test steps:
+1. Click on the button "Cabinet"
+2. Enter valid login into the input field "Login"
+3. Enter valid password into the input field "Password"
+4. Set checkbox "Remember me" to needed state
+5. Click on the button "Sign in"
+6. Click on the button "Knigi" in the catalog
+7. Click on the button "Xudoznia literatura" in the catalog
+8. Click on the button "Istorichna proza" in the catalog
+9. Click on the button "Za perekopom je zemlia"
+10. Click on the button "Add to wish list"
+11. Click on the button "Wish list"
+
+
+Expected results:
+Book "Za perekopom je zemlia" is displayed
+
+
+TC_006_RemoveOneBookFromWishList
+Preconditions:
+1. Open browser
+2. Navigate to the login page
+
+Test steps:
+1. Click on the button "Cabinet"
+2. Enter valid login into the input field "Login"
+3. Enter valid password into the input field "Password"
+4. Set checkbox "Remember me" to needed state
+5. Click on the button "Sign in"
+6. Click on the button "Knigi" in the catalog
+7. Click on the button "Xudoznia literatura" in the catalog
+8. Click on the button "Istorichna proza" in the catalog
+9. Click on the button "Za perekopom je zemlia"
+10. Click on the button "Add to wish list"
+11. Click on the button "Wish list"
+12. Click on the button "Za perekopom je zemlia"
+13. Click on the button "Remove from wish list"
+14. Click on the button "Wish list"
+
+
+Expected results:
+Book "Za perekopom je zemlia" is not displayed
+
+
+
+
 
 
 
