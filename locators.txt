@@ -42,3 +42,9 @@ buttonZaPerekopomJeZemlia = .//a[@href='https://readeat.com/product/104302-za-pe
 Za Perekopom Je Zemlia Page
 buttonAddToCart = .//button[@class='btn btn-primary w-100 px-0 fn_cartAdd']
 
+WishList Page
+ButtonZaPerekopomJeZemliaOnWishListPage = .//a[@href='https://readeat.com/product/104302-za-perekopom-je-zemlia'][contains(text(),'За Перекопом є земля')]
+
+ImgZaPerekopomJeZemliaOnWishListPage = .//img[@alt='Фото За Перекопом є земля']
+
+buttonRemoveFromWishListOnWishListPage = .//button[@class='fn_remove_wishlist btn btn-light active me-2 mt-2 p-2 rounded-3']

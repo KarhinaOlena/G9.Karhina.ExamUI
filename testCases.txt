@@ -90,7 +90,8 @@ Test steps:
 11. Click on the button "Remove from cart"
 
 Expected results:
-
+1.ButtonLoginDisplayed;
+2.ButtonRegisterDisplayed;
 
 
 TC_005_AddOneBookToWishList
@@ -140,6 +141,25 @@ Test steps:
 
 Expected results:
 Book "Za perekopom je zemlia" is not displayed
+
+TC_007_checkingOfDataDisappearingFromInputsAfterRefreshingPage
+Preconditions:
+1. Open browser
+2. Navigate to the login page
+
+Test steps:
+1. Enter valid login into the input field "Login"
+2. Enter valid password into the input field "Password"
+3. Refresh the page
+4. Click on the button "Cabinet"
+5. Click on the button Sign In
+
+Expected results:
+1.InputLogin is empty
+2.InputPassword is empty
+3.ButtonCabinet is not displayed
+4.ButtonSignIn is displayed
+
 
 
 

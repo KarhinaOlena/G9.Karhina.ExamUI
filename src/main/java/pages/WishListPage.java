@@ -11,6 +11,10 @@ public class WishListPage extends ParentPage{
     @FindBy(xpath = ".//a[@href='https://readeat.com/product/104302-za-perekopom-je-zemlia'][contains(text(),'За Перекопом є земля')]")
     private static WebElement ButtonZaPerekopomJeZemliaOnWishListPage;
 
+    @FindBy(xpath = ".//img[@alt='Фото За Перекопом є земля']")
+    private static WebElement ImgZaPerekopomJeZemliaOnWishListPage;
+
+
 
     @FindBy(xpath = ".//button[@class='fn_remove_wishlist btn btn-light active me-2 mt-2 p-2 rounded-3']")
     private static WebElement buttonRemoveFromWishListOnWishListPage;
@@ -18,7 +22,7 @@ public class WishListPage extends ParentPage{
 
 
     @Override
-    protected String getRelativeUrl() {return "account/mywishlist";}
+    protected String getRelativeUrl() {return "/wishlist";}
 
 public WishListPage checkIsRedirectToWishListPage() {
         checkUrl();
@@ -26,13 +30,14 @@ public WishListPage checkIsRedirectToWishListPage() {
     }
 
 
-    public boolean checkIsZaPerekopomJeZemliaDisplayed() {
-        return isElementDisplayed(ButtonZaPerekopomJeZemliaOnWishListPage);
+    public boolean checkIsImgZaPerekopomJeZemliaDisplayed() {
+        return isElementDisplayed(ImgZaPerekopomJeZemliaOnWishListPage);
     }
 
-    public boolean checkIsZaPerekopomJeZemliaNotDisplayed() {
-        return checkElementIsNotDisplayed (ButtonZaPerekopomJeZemliaOnWishListPage);
+    public boolean checkIsImgZaPerekopomJeZemliaNotDisplayed() {
+        return checkElementIsNotDisplayed (ImgZaPerekopomJeZemliaOnWishListPage);
     }
+
 
     public void clickOnImgZaPerekopomJeZemlia() {
         clickOnElement(ButtonZaPerekopomJeZemliaOnWishListPage);

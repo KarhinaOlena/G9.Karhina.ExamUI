@@ -126,6 +126,11 @@ public class CommonActionsWithElements {
         return true;
     }
 
+    public void refreshPage() {
+        webDriver.navigate().refresh();
+
+    }
+
     private String getElementName(WebElement webElement) {
         try {
             return webElement.getAccessibleName();

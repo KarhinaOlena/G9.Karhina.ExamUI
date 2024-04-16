@@ -19,7 +19,7 @@ public class RemoveFromWishList extends BaseTest {
         pageProvider.getZaPerekopomJeZemliaPage().checkIsRedirectToZaPerekopomJeZemliaBookPage();
         pageProvider.getZaPerekopomJeZemliaPage().clickOnButtonAddToWishList();
         pageProvider.getHomePage().getHeaderElements().clickOnButtonWishList();
-//        pageProvider.getWishListPage().checkIsRedirectToWishListPage();
+        pageProvider.getWishListPage().checkIsRedirectToWishListPage();
         pageProvider.getWishListPage().clickOnImgZaPerekopomJeZemlia();
         pageProvider.getZaPerekopomJeZemliaPage().checkIsRedirectToZaPerekopomJeZemliaBookPage();
         pageProvider.getZaPerekopomJeZemliaPage().clickOnButtonRemoveFromWishList();

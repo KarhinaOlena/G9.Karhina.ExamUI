@@ -30,6 +30,10 @@ public class HeaderElements extends CommonActionsWithElements {
         return isElementDisplayed(buttonCabinet);
     }
 
+    public boolean checkIsButtonCabinetNotDisplayed() {
+        return checkElementIsNotDisplayed(buttonCabinet);
+    }
+
     public void clickOnButtonWishList() {
         clickOnElement(buttonWishList);
     }
