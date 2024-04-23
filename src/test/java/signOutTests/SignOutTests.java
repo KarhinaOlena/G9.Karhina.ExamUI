@@ -7,7 +7,7 @@ import org.junit.Test;
 public class SignOutTests extends BaseTest {
     @Test
     public void TC_003_SignOut(){
-        pageProvider.getLoginPage().enterLoginFormWithValidCred(TestData.VALID_LOGIN_UI, TestData.VALID_PASSWORD_UI);
+        pageProvider.getLoginPage().enterLoginForm(TestData.VALID_LOGIN_UI, TestData.VALID_PASSWORD_UI);
         pageProvider.getHomePage().checkIsRedirectToHomePage();
         pageProvider.getHeaderElements().clickOnButtonCabinet();
         pageProvider.getMyProfilePage().checkIsRedirectToMyProfilePage();

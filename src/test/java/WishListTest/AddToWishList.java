@@ -5,9 +5,10 @@ import data.TestData;
 import org.junit.Test;
 
 public class AddToWishList extends BaseTest {
+   final String bookName = "За перекопом є земля";
     @Test
     public void TC_005_AddOneBookToWishList() {
-        pageProvider.getLoginPage().enterLoginFormWithValidCred(TestData.VALID_LOGIN_UI, TestData.VALID_PASSWORD_UI);
+        pageProvider.getLoginPage().enterLoginForm(TestData.VALID_LOGIN_UI, TestData.VALID_PASSWORD_UI);
         pageProvider.getHomePage().checkIsRedirectToHomePage();
         pageProvider.getHomePage().clickOnButtonKnigiInCatalog();
         pageProvider.getKnigiPage().checkIsRedirectToKnigiPage();
@@ -20,7 +21,7 @@ public class AddToWishList extends BaseTest {
         pageProvider.getZaPerekopomJeZemliaPage().clickOnButtonAddToWishList();
         pageProvider.getHomePage().getHeaderElements().clickOnButtonWishList();
         pageProvider.getWishListPage().checkIsRedirectToWishListPage();
-        pageProvider.getWishListPage().checkIsImgZaPerekopomJeZemliaDisplayed();
+        pageProvider.getWishListPage().checkIsImgZaPerekopomJeZemliaDisplayed(bookName);
 
     }
 

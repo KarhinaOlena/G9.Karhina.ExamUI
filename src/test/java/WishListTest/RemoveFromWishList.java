@@ -5,9 +5,10 @@ import data.TestData;
 import org.junit.Test;
 
 public class RemoveFromWishList extends BaseTest {
+    final String bookName = "За перекопом є земля";
     @Test
     public void TC_006_RemoveOneBookFromWishList() {
-        pageProvider.getLoginPage().enterLoginFormWithValidCred(TestData.VALID_LOGIN_UI, TestData.VALID_PASSWORD_UI);
+        pageProvider.getLoginPage().enterLoginForm(TestData.VALID_LOGIN_UI, TestData.VALID_PASSWORD_UI);
         pageProvider.getHomePage().checkIsRedirectToHomePage();
         pageProvider.getHomePage().clickOnButtonKnigiInCatalog();
         pageProvider.getKnigiPage().checkIsRedirectToKnigiPage();
@@ -25,6 +26,7 @@ public class RemoveFromWishList extends BaseTest {
         pageProvider.getZaPerekopomJeZemliaPage().clickOnButtonRemoveFromWishList();
         pageProvider.getZaPerekopomJeZemliaPage().checkIsButtonAddToWishListDisplayed();
         pageProvider.getHomePage().getHeaderElements().clickOnButtonWishList();
+        pageProvider.getWishListPage().checkIsImgZaPerekopomJeZemliaNotDisplayed(bookName);
 
 
 

@@ -25,7 +25,7 @@ public class MyProfilePage extends ParentPage {
 
 
     @FindBy(xpath = ".//h1[@class='mb-3']")
-    private WebElement CabinetTitle;
+    private WebElement cabinetTitle;
 
 
     @FindBy(xpath = ".//div[@class='h5 border-bottom mb-4 pb-4'][contains(text(),'Особисті дані')]")
@@ -76,7 +76,7 @@ public class MyProfilePage extends ParentPage {
     }
 
     public void checkIsCabinetTitleDisplayed() {
-        checkElementIsDisplayed(CabinetTitle);
+        checkElementIsDisplayed(cabinetTitle);
     }
 
     public void checkIsPersonalDataTitleDisplayed() {

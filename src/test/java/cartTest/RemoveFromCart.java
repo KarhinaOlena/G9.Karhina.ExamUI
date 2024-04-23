@@ -7,7 +7,7 @@ import org.junit.Test;
 public class RemoveFromCart extends BaseTest {
     @Test
     public void TC_004_RemoveOneBookFromCart(){
-        pageProvider.getLoginPage().enterLoginFormWithValidCred(TestData.VALID_LOGIN_UI, TestData.VALID_PASSWORD_UI);
+        pageProvider.getLoginPage().enterLoginForm(TestData.VALID_LOGIN_UI, TestData.VALID_PASSWORD_UI);
         pageProvider.getHomePage().checkIsRedirectToHomePage();
         pageProvider.getHomePage().clickOnButtonKnigiInCatalog();
         pageProvider.getKnigiPage().checkIsRedirectToKnigiPage();
@@ -22,6 +22,7 @@ public class RemoveFromCart extends BaseTest {
         pageProvider.getCartElements().checkIsButtonRemoveFromCartDisplayed();
         pageProvider.getCartElements().checkIsCartModalLabelDisplayed();
         pageProvider.getCartElements().clickOnButtonRemoveFromCart();
+        pageProvider.getCartElements().checkIsCartIsEmptyLabelDisplayed();
 
 
     }

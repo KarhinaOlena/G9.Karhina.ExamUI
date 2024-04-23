@@ -63,7 +63,7 @@ public class LoginPage extends ParentPage {
         clickOnElement(buttonSignIn);
     }
 
-    public void enterLoginFormWithValidCred(String login, String password) {
+    public void enterLoginForm(String login, String password) {
         openLoginPage();
         clickOnButtonCabinetLoginPage();
         enterTextIntoInputLogin(login);
